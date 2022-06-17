@@ -31,7 +31,7 @@ const PokemonEvolutionChain = (props: PokemonEvolutionChainProps) => {
         ...chains,
         {
           name: evolChain?.species.name,
-          minLevel: (evolChain as any)?.evolution_details?.[0]?.min_level || 0,
+          minLevel: evolChain?.evolution_details?.[0]?.min_level || 0,
         },
       ];
       return evolutionChainSimplify(evolChain?.evolves_to[0], _chains);
@@ -40,7 +40,7 @@ const PokemonEvolutionChain = (props: PokemonEvolutionChainProps) => {
       ...chains,
       {
         name: evolChain?.species.name,
-        minLevel: (evolChain as any)?.evolution_details?.[0]?.min_level || 0,
+        minLevel: evolChain?.evolution_details?.[0]?.min_level || 0,
       },
     ];
   };
