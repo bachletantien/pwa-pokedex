@@ -1,0 +1,21 @@
+.outline-dark:hover {
+  background-color: #343a40;
+  border-color: #343a40;
+  color: #fff;
+}
+
+.wrong {
+  background-color: #ea2027;
+  border-color: #ea2027;
+  color: #fff;
+}
+
+.right {
+  background-color: #2ed573;
+  border-color: #2ed573;
+  color: #fff;
+}
+
+.disabled-letter {
+  @apply select-none opacity-50;
+}

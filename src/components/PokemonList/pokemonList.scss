@@ -1,0 +1,12 @@
+.pokemon-card {
+  @apply relative  bg-[#fff]  shadow-md rounded-2xl mt-[50px];
+  .image-wrapper {
+    @apply absolute top-[-10px] translate-y-[-50%] w-full h-fit  flex flex-col justify-center items-center;
+    img {
+      @apply object-scale-down  align-middle;
+    }
+  }
+  .card-info {
+    @apply pt-[50px];
+  }
+}

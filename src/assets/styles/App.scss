@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  html {
+    @apply p-0  m-0  box-border;
+  }
+  body {
+    @apply font-exo scroll-smooth overflow-y-visible overflow-x-hidden;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+$types: (
+  fairy: theme('colors.fairy'),
+  fire: theme('colors.fire'),
+  fighting: theme('colors.fighting'),
+  dragon: theme('colors.dragon'),
+  electric: theme('colors.electric'),
+  grass: theme('colors.grass'),
+  normal: theme('colors.normal'),
+  bug: theme('colors.bug'),
+  ice: theme('colors.ice'),
+  water: theme('colors.water'),
+  psychic: theme('colors.psychic'),
+  poison: theme('colors.poison'),
+  ghost: theme('colors.ghost'),
+  ground: theme('colors.ground'),
+  rock: theme('colors.rock'),
+  steel: theme('colors.steel'),
+  dark: theme('colors.dark'),
+  flying: theme('colors.flying'),
+);
+
+$stats: (
+  hp: theme('colors.hp'),
+  attack: theme('colors.attack'),
+  defense: theme('colors.defense'),
+  special-attack: theme('colors.special-attack'),
+  special-defense: theme('colors.special-defense'),
+  speed: theme('colors.speed'),
+);
+
+@each $type, $value in $types {
+  [data-color='#{$type}'] {
+    background-color: $value !important;
+  }
+
+  [data-image='#{$type}'] {
+    background-image: url(#{'../svgs/' + $type + '.svg'});
+    background-repeat: no-repeat;
+  }
+}
+
+// @each $type in map-keys($types)
+
+@each $stat, $value in $stats {
+  [data-color='#{$stat}'] {
+    background-color: $value !important;
+  }
+}

@@ -1,0 +1,19 @@
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+}
+
+.name-letter {
+  font-size: 30px;
+  margin: 0;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}

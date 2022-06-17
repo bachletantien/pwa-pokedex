@@ -1,0 +1,85 @@
+.pokemon-detail-container {
+  @apply pb-4 mt-7 lg:flex-col  overflow-y-auto -order-1 lg:order-1 relative  overflow-x-hidden lg:mt-0 lg:sticky lg:top-5 col-span-4;
+  background-color: #fff;
+  border-radius: 35px;
+  height: 325px;
+
+  @media (min-width: 1025px) {
+    height: 700px;
+  }
+}
+
+.img-pokemon-detail {
+  @apply max-w-[200px] w-full flex flex-col justify-center mx-auto items-center px-16 gap-y-6;
+  top: -70px;
+}
+
+.pokemon-gender {
+  @apply absolute flex flex-col top-5 right-5 gap-2;
+
+  .pokemon-gender-item {
+    @apply w-6 h-6 p-1;
+  }
+}
+
+.pokemon-detail-content {
+  @apply px-4 text-center;
+
+  .type-pokemon {
+    @apply flex gap-4 justify-center;
+  }
+
+  .genux-pokemon {
+    @apply text-sm text-gray my-2;
+  }
+
+  .pokedex-entry {
+    @apply font-bold;
+
+    .text-entry-desc {
+      @apply text-black font-normal;
+    }
+  }
+
+  .pokedex-abilities {
+    @apply font-bold my-4;
+  }
+}
+
+.pokemon-heading {
+  @apply uppercase text-lg mb-2 leading-relaxed font-bold;
+}
+
+.pokemon-info {
+  @apply grid grid-cols-2 gap-x-4;
+}
+
+.pokemon-stats {
+  .pokemon-base-stat {
+    @apply pb-2 font-bold;
+  }
+
+  .stat-item {
+    @apply bg-opacity-60  rounded-full flex flex-col items-center justify-center;
+
+    .stat-name {
+      @apply w-8 h-8 rounded-full m-1 uppercase flex items-center justify-center;
+    }
+  }
+}
+.wrapper-content {
+  @apply bg-gray/10 flex items-center justify-center py-1;
+  border-radius: 35px;
+}
+
+.pokemon-pagination {
+  @apply divide-x-2 divide-black;
+  img {
+    @apply w-6;
+  }
+
+  .prevPokemon,
+  .nextPokemon {
+    @apply flex justify-center items-center gap-2 px-6 py-2  cursor-pointer hover:bg-gray/50;
+  }
+}
